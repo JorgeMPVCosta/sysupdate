@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=0.2
+Name=SysUpdate
+Type=Application
+Comment=Linux system updater
+Comment=Jorge Costa @ JORGECOSTAtech
+Terminal=true
+Exec=sysupdate
+Icon=/usr/share/icons/SysUpdateIcon.png
+Categories=ConsoleOnly;System;
+Keywords=system;update;apt;flatpak;snap
