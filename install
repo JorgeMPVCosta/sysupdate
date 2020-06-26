@@ -3,20 +3,21 @@
 # SysUpdate INSTALLER
 # This is a bash script used to update Debian and/or Ubuntu based systems.  
 # It updates apt, flatpak and snap packages.
-# Jun 25, 2020 - Version 0.3
+# Jun 26, 2020 - Version 0.3.2
 
 printf "\n[ ** ] Copyting Files\n";
-sudo cp sysupdate /usr/bin;
+cp sysupdate /usr/bin;
 
 printf "[ ** ] Getting Permision\n";
-sudo chmod +x /usr/bin/sysupdate;
+chmod +x /usr/bin/sysupdate;
 
 printf "[ ** ] Setting Icon\n";
-sudo cp SysUpdateIcon.png /usr/share/icons/SysUpdateIcon.png;
+cp SysUpdateIcon.png /usr/share/icons/;
 
-printf "[ ** ] Installing\n";
-sudo cp sysupdate.desktop /usr/share/applications/sysupdate.desktop;
+printf "[ ** ] Creating Application Shortcut\n";
+cp sysupdate.desktop /usr/share/applications/;
 
+# unnessery 
 operation() {
     sudo cp sysupdate /usr/bin;
     sudo chmod +x /usr/bin/sysupdate;
@@ -24,5 +25,4 @@ operation() {
     sudo cp sysupdate.desktop /usr/share/applications/sysupdate.desktop;
 }
 
-printf "[ ** ] Install Complete\n";
-echo
+printf "[ ** ] Install Complete\n"; echo && exit 0;
